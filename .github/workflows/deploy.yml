@@ -1,0 +1,20 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build and deploy to gh-pages
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.2.0
+      with:
+        github_access_token: ${{ secrets.GITHUB_TOKEN }}
+        build_configuration: production
+        base_href: /angular/
+        deploy_branch: gh-pages
+        build_folder: dist/irclog-ng

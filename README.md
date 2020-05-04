@@ -1,3 +1,5 @@
+[![Build and Deploy](https://github.com/irclogs/angular/workflows/Build%20and%20Deploy/badge.svg)](https://github.com/irclogs/angular/actions)
+
 # `Irclog CouchApp` - a web app to view irclogs (angular edition)
 
 The logs are stored in couchdb.

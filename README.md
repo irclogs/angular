@@ -6,7 +6,7 @@
 The logs are stored in couchdb.
 
 The single page web app is written in angular and stored as a
-[couchapp](http://couchapp.readthedocs.io/en/latest/intro/what-is-couchapp.html)
+[couchapp](https://github.com/irclogs/couchapp)
 in couchdb attachments.
 
 ## Quick start - for developers

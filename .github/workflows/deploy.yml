@@ -2,13 +2,16 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+
+    - name: yarn ci
+      run: yarn install --frozen-lockfile
 
     - name: Build and deploy to gh-pages
       uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
@@ -17,4 +20,3 @@ jobs:
         build_configuration: production
         base_href: /angular/
         deploy_branch: gh-pages
-        build_folder: dist/irclog-ng
